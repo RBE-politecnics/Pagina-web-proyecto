@@ -1,3 +1,6 @@
+
+
+/*Menú desplegable*/
 .dropdown {
     position: relative;
     display: inline-block;
@@ -17,3 +20,25 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  /*Titulos*/
+  .title {
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    background-color: #61378C;
+}
+
+/*Centrar formulario index*/
+.formulari_index {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Centrar el indice index*/
+.indice {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
