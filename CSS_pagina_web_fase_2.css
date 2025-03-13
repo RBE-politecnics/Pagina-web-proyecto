@@ -1,44 +1,190 @@
-
-
 /*Menú desplegable*/
 .dropdown {
     position: relative;
     display: inline-block;
-    
-  }
-  
-  .dropdown-content {
+    margin: 20px;
+    vertical-align: middle;
+}
+
+.main-title {
+    display: inline-block;
+    font-size: 3em;
+    text-align: center;
+    margin: 20px;
+    background: none;
+    font-weight: bold;
+    background: linear-gradient(45deg, #61378C, #28cf9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    padding: 10px;
+    letter-spacing: 5px;
+    vertical-align: middle;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -20px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover .bar {
+    background-color: #28cf9d;
+}
+
+.bar {
+    width: 45px;
+    height: 5px;
+    background-color: #61378C;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #28cf9db9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    background: linear-gradient(135deg, #61378C, #28cf9d);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 15px 20px;
     z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
 
-  /*Titulos*/
-  .title {
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    transform: translateX(10px);
+    color: #28cf9d;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/*Titulos*/
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    left: 20px;
+}
+
+.main-title {
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(45deg, #61378C, #28cf9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.title {
     font-size: xx-large;
     text-align: center;
     color: white;
-    background-color: #61378C;
+    background: linear-gradient(45deg, #61378C, #28cf9d);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /*Centrar formulario index*/
 .formulari_index {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(97, 55, 140, 0.05);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.formulari_index input, .formulari_index button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #61378C;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.formulari_index input:focus {
+    outline: none;
+    border-color: #28cf9d;
+    box-shadow: 0 0 5px rgba(40, 207, 157, 0.5);
+}
+
+.formulari_index button {
+    background: #61378C;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.formulari_index button:hover {
+    background: #28cf9d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /*Centrar el indice index*/
-.indice {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+.indice_index {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.indice_index a {
+    color: #61378C;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.indice_index a:hover {
+    background: #28cf9d;
+    color: white;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
