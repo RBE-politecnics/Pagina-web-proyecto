@@ -193,7 +193,7 @@
 
 /* Estilo del logo */
 .logo-cep {
-    width: 200px;
+    width: 300px;        /* Aumentado de 200px */
     height: auto;
     position: absolute;
     right: 20px;
@@ -357,8 +357,8 @@ p {
     text-align: center;
     color: white;
     background: #D8262E;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 2px 20px;        /* Reducido aún más el padding vertical a 2px */
+    margin: 2px 0;           /* Reducido aún más el margen vertical a 2px */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -473,4 +473,3 @@ p {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-top: 20px;
     min-height: calc(100vh - 250px); /* Altura mínima considerando padding y márgenes */
-}
