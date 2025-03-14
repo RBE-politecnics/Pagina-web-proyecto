@@ -1,88 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica de la página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina web fase 2</title>
+    <!-- Enlace a la hoja de estilos CSS -->
     <link rel="stylesheet" href="./CSS_pagina_web_fase_2.css">
+    <!-- Importación de la fuente Bulo Rounded -->
+    <link href="https://fonts.googleapis.com/css2?family=Bulo+Rounded:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Contenedor del encabezado con menú y título -->
     <div class="header-wrapper">
+        <!-- Menú desplegable -->
         <div class="dropdown">
+            <!-- Botón hamburguesa -->
             <div class="hamburger-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            <!-- Contenido del menú desplegable -->
             <div class="dropdown-content">
-                <a href="./Index.html">Pagina principal</a><br>
-                <a href="./Paginas_secundarias/App_para_la_escuela.html">Reto 2</a><br>
-                <a href="./Paginas_secundarias/Controladores_de_dominio_LDAP.html">Reto 3</a><br>
-                <a href="./Paginas_secundarias/Estrategiass_de_recuperacion_de_datos_y _gestion_de_la_informacion.html">Reto 4</a><br>
-                <a href="./Paginas_secundarias/Implementacion_de_servidores_windows_linux.html">Reto 5</a><br>
-                <a href="./Paginas_secundarias/Protege_la_red.html">Reto 6</a><br>
-                <a href="./Paginas_secundarias/Protege_los_datos.html">Reto 7</a><br>
+                <a href="./Index.html">Pagina principal</a>
+                <a href="./Paginas_secundarias/App_para_la_escuela.html">Reto 2</a>
+                <a href="./Paginas_secundarias/Controladores_de_dominio_LDAP.html">Reto 3</a>
+                <a href="./Paginas_secundarias/Estrategiass_de_recuperacion_de_datos_y _gestion_de_la_informacion.html">Reto 4</a>
+                <a href="./Paginas_secundarias/Implementacion_de_servidores_windows_linux.html">Reto 5</a>
+                <a href="./Paginas_secundarias/Protege_la_red.html">Reto 6</a>
+                <a href="./Paginas_secundarias/Protege_los_datos.html">Reto 7</a>
             </div>
         </div>
+        <!-- Título principal de la página -->
         <p class="main-title">PROYECTO</p>
     </div>
-<!--Esto es el indice de la pagina principal-->
+
+    <!-- Sección del índice -->
     <p class="title">Indice</p>
-  <div class="indice_index">
-    <a href="./Paginas_secundarias/App_para_la_escuela.html">Reto 2</a><br>
-    <a href="./Paginas_secundarias/Controladores_de_dominio_LDAP.html">Reto 3</a><br>
-    <a href="./Paginas_secundarias/Estrategiass_de_recuperacion_de_datos_y _gestion_de_la_informacion.html">Reto 4</a><br>
-    <a href="./Paginas_secundarias/Implementacion_de_servidores_windows_linux.html">Reto 5</a><br>
-    <a href="./Paginas_secundarias/Protege_la_red.html">Reto 6</a><br>
-    <a href="./Paginas_secundarias/Protege_los_datos.html">Reto 7</a><br>
-  </div>
-  <!--Formulari-->
-  <p class="title">Formulari d'incidencies</p>
-  <div class="formulari_index">
-    <form action="mail.php" method="POST">
-      <label>Nom</label><br>
-      <input type="text" required><br><br>
-     
-      <label>Cogom</label><br>
-      <input type="text"><br><br>
-  
-      <label>Correu</label><br>
-      <input type="email" required><br><br>
-  
-      <label>Telefon</label><br>
-      <input type="tel"><br><br>
-  
-      <label>Numero d'ordinadors integrats</label><br>
-      <input type="number"><br><br>
-  
-      <label>Tipus de conexio</label><br>
-      <input list="conexiones">
-      <datalist id="conexiones">
-        <option value="Wifi 1">
-        <option value="Cable">
-        <option value="Ambdues">
-      </datalist><br><br>
-  
-      <label>Numero de sales que es faran servir</label><br>
-      <input list="salas">
-      <datalist id="salas">
-        <option value="1">
-        <option value="2">
-        <option value="3">
-        <option value="4">
-        <option value="5">
-        <option value="6">
-        <option value="7">
-        <option value="8">
-        <option value="9">
-        <option value="10">
-      </datalist><br><br>
-  
-      <label>Comentaris</label><br>
-      <input type="text"><br><br>
-  
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
+    <!-- Lista de enlaces a las diferentes secciones -->
+    <div class="indice_index">
+        <a href="./Paginas_secundarias/App_para_la_escuela.html">Reto 2</a>
+        <a href="./Paginas_secundarias/Controladores_de_dominio_LDAP.html">Reto 3</a>
+        <a href="./Paginas_secundarias/Estrategiass_de_recuperacion_de_datos_y _gestion_de_la_informacion.html">Reto 4</a>
+        <a href="./Paginas_secundarias/Implementacion_de_servidores_windows_linux.html">Reto 5</a>
+        <a href="./Paginas_secundarias/Protege_la_red.html">Reto 6</a>
+        <a href="./Paginas_secundarias/Protege_los_datos.html">Reto 7</a>
+    </div>
+
+    <!-- Sección del formulario -->
+    <p class="title">Formulari d'incidencies</p>
+    <div class="formulari_index">
+        <!-- Formulario de contacto -->
+        <form action="mail.php" method="POST">
+            <!-- Campo nombre -->
+            <label>Nom</label><br>
+            <input type="text" required><br><br>
+            
+            <!-- Campo apellido -->
+            <label>Cogom</label><br>
+            <input type="text"><br><br>
+            
+            <!-- Campo correo electrónico -->
+            <label>Correu</label><br>
+            <input type="email" required><br><br>
+            
+            <!-- Campo teléfono -->
+            <label>Telefon</label><br>
+            <input type="tel"><br><br>
+            
+            <!-- Campo número de ordenadores -->
+            <label>Numero d'ordinadors integrats</label><br>
+            <input type="number"><br><br>
+            
+            <!-- Selector de tipo de conexión -->
+            <label>Tipus de conexio</label><br>
+            <input list="conexiones">
+            <datalist id="conexiones">
+                <option value="Wifi 1">
+                <option value="Cable">
+                <option value="Ambdues">
+            </datalist><br><br>
+            
+            <!-- Selector de número de salas -->
+            <label>Numero de sales que es faran servir</label><br>
+            <input list="salas">
+            <datalist id="salas">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+                <option value="9">
+                <option value="10">
+            </datalist><br><br>
+            
+            <!-- Campo de comentarios -->
+            <label>Comentaris</label><br>
+            <input type="text"><br><br>
+            
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>

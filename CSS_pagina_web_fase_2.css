@@ -1,81 +1,84 @@
-/*Menú desplegable*/
+/* Configuración del menú desplegable y su posicionamiento */
 .dropdown {
-    position: relative;
-    display: inline-block;
-    margin: 20px;
-    vertical-align: middle;
+    position: relative;        /* Permite posicionar elementos hijos de forma absoluta */
+    display: inline-block;     /* Hace que el elemento ocupe solo el espacio necesario */
+    margin: 20px;             /* Espacio exterior alrededor del menú */
+    vertical-align: middle;    /* Alinea verticalmente en el centro */
 }
 
+/* Estilo del título principal */
 .main-title {
     display: inline-block;
-    font-size: 3em;
-    text-align: center;
+    font-size: 3em;           /* Tamaño grande de la fuente */
+    text-align: center;       /* Centra el texto */
     margin: 20px;
-    background: none;
-    font-weight: bold;
-    background: linear-gradient(45deg, #61378C, #28cf9d);
-    -webkit-background-clip: text;
+    font-weight: bold;        /* Texto en negrita */
+    background: linear-gradient(45deg, #D8262E, #F98D29);  /* Degradado de color en el texto */
+    -webkit-background-clip: text;    /* Aplica el degradado solo al texto */
     -webkit-text-fill-color: transparent;
-    text-shadow: none;
-    padding: 10px;
-    letter-spacing: 5px;
+    letter-spacing: 5px;      /* Espaciado entre letras */
     vertical-align: middle;
 }
 
+/* Estilo del botón hamburguesa */
 .hamburger-menu {
-    cursor: pointer;
+    cursor: pointer;          /* Cambia el cursor a mano al pasar por encima */
     padding: 15px;
     position: relative;
-    z-index: 2;
+    z-index: 2;              /* Asegura que esté por encima de otros elementos */
     margin-bottom: -20px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;  /* Animación suave en cambios */
 }
 
-.hamburger-menu:hover .bar {
-    background-color: #28cf9d;
-}
-
+/* Barras del menú hamburguesa */
 .bar {
-    width: 45px;
-    height: 5px;
-    background-color: #61378C;
-    margin: 8px 0;
+    width: 45px;             /* Ancho de las barras */
+    height: 5px;             /* Altura de las barras */
+    background-color: #D8262E;
+    margin: 8px 0;           /* Espacio entre barras */
     transition: all 0.3s ease;
-    border-radius: 3px;
+    border-radius: 3px;      /* Bordes redondeados de las barras */
 }
 
+/* Contenido del menú desplegable */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background: linear-gradient(135deg, #61378C, #28cf9d);
+    display: none;           /* Oculto por defecto */
+    position: absolute;      /* Se posiciona respecto al padre */
+    background: white;       /* Fondo blanco */
     min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    padding: 15px 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);  /* Sombra para efecto de elevación */
+    padding: 0;
     z-index: 1;
-    border-radius: 10px;
-    transition: all 0.3s ease;
 }
 
+/* Enlaces dentro del menú desplegable */
 .dropdown-content a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 0;
+    color: #6A478D;         /* Color del texto */
+    text-decoration: none;   /* Sin subrayado */
+    padding: 12px 20px;
     display: block;
-    transition: all 0.2s ease;
+    border-bottom: 1px solid #000000;  /* Línea separadora */
+    margin: 0;
 }
 
+/* Último enlace sin borde inferior */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Efecto hover en los enlaces */
 .dropdown-content a:hover {
-    transform: translateX(10px);
-    color: #28cf9d;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    background-color: #f5f5f5;  /* Color de fondo al pasar el ratón */
+    color: #F98D29;
 }
 
+/* Mostrar menú al hacer hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    animation: fadeIn 0.3s ease;
+    animation: fadeIn 0.3s ease;  /* Animación de aparición */
 }
 
-/*Titulos*/
+/* Contenedor del encabezado */
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -85,36 +88,19 @@
     position: relative;
 }
 
-.dropdown {
-    position: absolute;
-    left: 20px;
-}
-
-.main-title {
-    width: 100%;
-    font-size: 3em;
-    text-align: center;
-    font-weight: bold;
-    background: linear-gradient(45deg, #61378C, #28cf9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 5px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
+/* Títulos secundarios */
 .title {
     font-size: xx-large;
     text-align: center;
     color: white;
-    background: linear-gradient(45deg, #61378C, #28cf9d);
+    background: #D8262E;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/*Centrar formulario index*/
+/* Estilos del formulario */
 .formulari_index {
     display: grid;
     align-items: center;
@@ -125,37 +111,40 @@
     margin: 20px;
 }
 
+/* Campos de entrada y botones del formulario */
 .formulari_index input, .formulari_index button {
     padding: 10px;
     margin: 5px 0;
-    border: 2px solid #61378C;
+    border: 2px solid #6A478D;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
+/* Efecto al seleccionar un campo */
 .formulari_index input:focus {
     outline: none;
-    border-color: #28cf9d;
-    box-shadow: 0 0 5px rgba(40, 207, 157, 0.5);
+    border-color: #F98D29;
+    box-shadow: 0 0 5px rgba(249, 141, 41, 0.5);
 }
 
+/* Estilo del botón */
 .formulari_index button {
-    background: #61378C;
+    background: #6A478D;
     color: white;
     border: none;
     padding: 12px 25px;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
+/* Efecto hover en el botón */
 .formulari_index button:hover {
-    background: #28cf9d;
+    background: #F98D29;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/*Centrar el indice index*/
+/* Estilos del índice */
 .indice_index {
     display: grid;
     align-items: center;
@@ -164,20 +153,23 @@
     padding: 20px;
 }
 
+/* Enlaces del índice */
 .indice_index a {
-    color: #61378C;
+    color: #6A478D;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
+/* Efecto hover en enlaces del índice */
 .indice_index a:hover {
-    background: #28cf9d;
+    background: #F98D29;
     color: white;
     transform: scale(1.05);
 }
 
+/* Animación de aparición */
 @keyframes fadeIn {
     from {
         opacity: 0;
