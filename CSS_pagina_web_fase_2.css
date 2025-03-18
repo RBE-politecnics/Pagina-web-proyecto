@@ -351,16 +351,16 @@ p {
     );
 }
 
-/* Títulos secundarios */
+/* Títulos secundarios - Estilo para la barra roja que contiene el título de cada sección */
 .title {
-    font-size: xx-large;
-    text-align: center;
-    color: white;
-    background: #D8262E;
-    padding: 2px 20px;        /* Reducido aún más el padding vertical a 2px */
-    margin: 2px 0;           /* Reducido aún más el margen vertical a 2px */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: xx-large;      /* Tamaño de fuente grande para destacar el título */
+    text-align: center;       /* Centrado horizontal del texto dentro de la barra */
+    color: white;            /* Color blanco para el texto para mejor contraste */
+    background: #D8262E;     /* Color de fondo rojo corporativo para la barra */
+    padding: 2px 20px;       /* Espaciado interno: 2px arriba/abajo, 20px izquierda/derecha */
+    margin: 2px 0;          /* Margen vertical mínimo para separar de otros elementos */
+    border-radius: 8px;      /* Bordes redondeados para suavizar la apariencia */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Sombra suave para dar efecto de elevación */
 }
 
 /* Estilos del formulario */
