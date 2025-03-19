@@ -250,7 +250,7 @@ body {
 
 /* Contenedor del encabezado */
 .header-wrapper + * {
-    min-height: calc(100vh - 150px); /* El resto del contenido ocupa el espacio restante */
+    /*min-height: calc(100vh - 150px); /* El resto del contenido ocupa el espacio restante */
     background-color: #f5f5f5; /* Color de fondo sutil */
     margin: 0;
     padding: 20px;
@@ -371,17 +371,43 @@ p {
     padding: 20px;
     background: rgba(97, 55, 140, 0.05);
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px auto;
+    width: 75%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor para cada grupo de label + input */
+.formulari_index form > div {
+    position: relative;
+    margin: 15px 0;
+    width: 300%;
+    left: -100%;
+}
+
+/* Estilo de las labels */
+.formulari_index label {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    color: var(--cep);
+    font-weight: bold;
 }
 
 /* Campos de entrada y botones del formulario */
-.formulari_index input, .formulari_index button {
+.formulari_index input {
+    width: 300%;
     padding: 10px;
     margin: 5px 0;
     border: 2px solid #6A478D;
     border-radius: 5px;
     transition: all 0.3s ease;
+    position: relative;
+    left: -100%;
 }
+
+
 
 /* Efecto al seleccionar un campo */
 .formulari_index input:focus {

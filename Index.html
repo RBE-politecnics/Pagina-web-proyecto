@@ -25,6 +25,12 @@
             <!-- Contenido del menú desplegable -->
             <div class="dropdown-content">
                 <a href="./Index.html">Pagina principal</a>
+                <a href="./Paginas_secundarias/Eleccion_de_la_infraestructura.html">Eleccion de la infraestructura</a>
+                <a href="./Paginas_secundarias/Diseño_y_implementacion_de_la_infraestructura_fisica.html">Diseño y implementacion de la infraestructura fisica</a>
+                <a href="./Paginas_secundarias/Mantenimiento_y_instalacion_del_servidor.html">Mantenimento y instalacion del servidor</a>
+                <a href="./Paginas_secundarias/Creacion_de_usuarios_y_gestion_de_permisos,_politicas_y_directivas.html">Creación de usuarios y gestión de permisos, políticas y directivas</a>
+                <a href="./Paginas_secundarias/Servidor_DHCP_y_DNS.html">Servidor DHCP y DNS</a>
+                <a href="./Paginas_secundarias/Recuperacion_de_un_sistema_informatico.html">Recuperación de un sistema informatico</a>
                 <a href="./Paginas_secundarias/Controladores_de_dominio_LDAP.html">Controladores de dominio LDAP</a>
                 <a href="./Paginas_secundarias/Implementacion_de_servidores_windows_linux.html">Implementacion de servidores windows y linux</a>
                 <a href="./Paginas_secundarias/Protege_la_red.html">Protege la red</a>
@@ -40,6 +46,12 @@
     <p class="title">Indice</p>
     <!-- Lista de enlaces a las diferentes secciones -->
      <div class="indice_index">
+        <a href="./Paginas_secundarias/Eleccion_de_la_infraestructura.html">Eleccion de la infraestructura</a>
+        <a href="./Paginas_secundarias/Diseño_y_implementacion_de_la_infraestructura_fisica.html">Diseño y implementacion de la infraestructura fisica</a>
+        <a href="./Paginas_secundarias/Mantenimiento_y_instalacion_del_servidor.html">Mantenimento y instalacion del servidor</a>
+        <a href="./Paginas_secundarias/Creacion_de_usuarios_y_gestion_de_permisos,_politicas_y_directivas.html">Creación de usuarios y gestión de permisos, políticas y directivas</a>
+        <a href="./Paginas_secundarias/Servidor_DHCP_y_DNS.html">Servidor DHCP y DNS</a>
+        <a href="./Paginas_secundarias/Recuperacion_de_un_sistema_informatico.html">Recuperación de un sistema informatico</a>
         <a href="./Paginas_secundarias/Controladores_de_dominio_LDAP.html">Controladores de dominio LDAP</a>
         <a href="./Paginas_secundarias/Implementacion_de_servidores_windows_linux.html">Implementacion de servidores windows y linux</a>
         <a href="./Paginas_secundarias/Protege_la_red.html">Protege la red</a>
@@ -47,58 +59,66 @@
     </div>
 
     <!-- Sección del formulario -->
-    <p class="title">Formulari d'incidencies</p>
+    <p class="title">Formulario de incidencias</p>
     <div class="formulari_index">
         <!-- Formulario de contacto -->
         <form action="mail.php" method="POST">
-            <!-- Campo nombre -->
-            <label>Nombre</label><br>
-            <input type="text" required><br><br>
+            <div>
+                <label>Nombre</label><br>
+                <input type="text" required><br><br>
+            </div>
             
-            <!-- Campo apellido -->
-            <label>Apellido</label><br>
-            <input type="text"><br><br>
+            <div>
+                <label>Apellido</label><br>
+                <input type="text"><br><br>
+            </div>
             
-            <!-- Campo correo electrónico -->
-            <label>Correo</label><br>
-            <input type="email" required><br><br>
+            <div>
+                <label>Correo</label><br>
+                <input type="email" required><br><br>
+            </div>
             
-            <!-- Campo teléfono -->
-            <label>Telefono</label><br>
-            <input type="tel"><br><br>
+            <div>
+                <label>Telefono</label><br>
+                <input type="tel"><br><br>
+            </div>
             
-            <!-- Campo número de ordenadores -->
-            <label>Numero de ordenadores integrados</label><br>
-            <input type="number"><br><br>
+            <div>
+                <label>Numero de ordenadores integrados</label><br>
+                <input type="number"><br><br>
+            </div>
             
-            <!-- Selector de tipo de conexión -->
-            <label>Tipo de conexion</label><br>
-            <input list="conexiones">
-            <datalist id="conexiones">
-                <option value="Wifi 1">
-                <option value="Cable">
-                <option value="Ambdues">
-            </datalist><br><br>
+            <div>
+                <label>Tipo de conexion</label><br>
+                <input list="conexiones">
+                <datalist id="conexiones">
+                    <option value="Wifi 1">
+                    <option value="Cable">
+                    <option value="Ambdues">
+                </datalist><br><br>
+            </div>
             
-            <!-- Selector de número de salas -->
-            <label>Numero de salas que se usaran</label><br>
-            <input list="salas">
-            <datalist id="salas">
-                <option value="1">
-                <option value="2">
-                <option value="3">
-                <option value="4">
-                <option value="5">
-                <option value="6">
-                <option value="7">
-                <option value="8">
-                <option value="9">
-                <option value="10">
-            </datalist><br><br>
+            <div>
+                <label>Numero de salas que se usaran</label><br>
+                <input list="salas">
+                <datalist id="salas">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                    <option value="7">
+                    <option value="8">
+                    <option value="9">
+                    <option value="10">
+                </datalist><br><br>
+            </div>
             
-            <!-- Campo de comentarios -->
-            <label>Comentarios</label><br>
-            <input type="text"><br><br>
+            <div>
+                <label>Comentarios</label><br>
+                <input type="text"><br><br>
+            </div>
             
             <!-- Botón de envío -->
             <button type="submit">Enviar</button>
