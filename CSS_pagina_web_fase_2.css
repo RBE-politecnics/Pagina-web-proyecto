@@ -378,41 +378,39 @@ p {
     overflow: hidden;
 }
 
-/* Contenedor para cada grupo de label + input */
 .formulari_index form > div {
     position: relative;
-    margin: 15px 0;
     width: 300%;
+    margin: 0;           /* Eliminado el margen */
     left: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;             /* Eliminado el gap */
 }
 
-/* Estilo de las labels */
 .formulari_index label {
-    position: absolute;
-    left: 0;
-    top: -25px;
+    width: 200px;
+    text-align: left;
     color: var(--cep);
     font-weight: bold;
+    margin: 0;          /* Eliminado el margen */
+    font-size: 14px;    /* Reducido el tamaño de fuente */
 }
 
-/* Campos de entrada y botones del formulario */
 .formulari_index input {
-    width: 300%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 2px solid #6A478D;
-    border-radius: 5px;
+    width: 100%;
+    padding: 3px;       /* Reducido el padding */
+    margin: 0 0 2px 0;  /* Solo un pequeño margen inferior */
+    border: 1px solid #6A478D;  /* Borde más fino */
+    border-radius: 3px;
     transition: all 0.3s ease;
-    position: relative;
-    left: -100%;
+    background-color: white;
+    height: 24px;       /* Altura fija más pequeña */
 }
 
-
-
-/* Efecto al seleccionar un campo */
 .formulari_index input:focus {
-    outline: none;
-    border-color: #F98D29;
+    border-color: var(--online);
     box-shadow: 0 0 5px rgba(249, 141, 41, 0.5);
 }
 
