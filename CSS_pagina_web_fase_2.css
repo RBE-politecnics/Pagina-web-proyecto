@@ -446,31 +446,31 @@ p {
 
 /* Estilos del índice */
 .indice_index {
-    display: grid;                    /* Usa grid para el layout */
-    align-items: center;             /* Centra los elementos verticalmente */
-    justify-content: center;         /* Centra los elementos horizontalmente */
-    gap: 12px;                      /* Espacio entre elementos del grid */
-    padding: 15px;                  /* Espacio interno del contenedor */
-    text-align: center;             /* Centra el texto */
-    width: 75%;                     /* Ancho del contenedor */
-    max-width: 1200px;              /* Ancho máximo */
-    margin: 0 auto;                 /* Centra el contenedor */
-    background: none;               /* Sin fondo */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;                      /* Reducido de 12px */
+    padding: 10px;                 /* Reducido de 15px */
+    text-align: center;
+    width: 50%;                    /* Reducido de 75% */
+    max-width: 800px;              /* Reducido de 1200px */
+    margin: 0 auto;
+    background: none;
 }
 
 /* Enlaces del índice */
 .indice_index a {
-    width: 100%;                    /* Ocupa todo el ancho disponible */
-    display: block;                 /* Muestra como bloque */
-    padding: 20px 30px;            /* Espacio interno del enlace */
-    margin: 0;                     /* Sin márgenes */
-    background: white;             /* Fondo blanco */
-    border-radius: 8px;            /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra suave */
-    color: #6A478D;                /* Color del texto */
-    text-decoration: none;         /* Sin subrayado */
-    transition: all 0.3s ease;     /* Animación suave */
-    font-size: 26px;              /* Tamaño de fuente grande */
+    width: 100%;
+    display: block;
+    padding: 12px 20px;            /* Reducido de 20px 30px */
+    margin: 0;
+    background: white;
+    border-radius: 6px;            /* Reducido de 8px */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #6A478D;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 20px;              /* Reducido de 26px */
 }
 
 /* Efecto hover en enlaces del índice */
