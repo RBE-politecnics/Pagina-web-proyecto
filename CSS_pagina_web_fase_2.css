@@ -1,9 +1,14 @@
+/*CAMBIOS
+Encabezaado mas estrecho
+"Fondo" para el indice
+*/
+
 /* Configuración del menú desplegable y su posicionamiento */
 .dropdown {
-    position: relative;
-    display: inline-block;
-    margin: 20px;
-    z-index: 1000;
+    position: relative;                /* Posicionamiento relativo para el contenedor */
+    display: inline-block;            /* Muestra como bloque en línea */
+    margin: 20px;                     /* Margen exterior uniforme */
+    z-index: 1000;                    /* Nivel de apilamiento alto */
 }
 
 /* Contenido del menú desplegable */
@@ -183,12 +188,12 @@
 
 /* Contenedor del encabezado */
 .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    position: relative;
+    display: flex;                     /* Usa flexbox para el layout */
+    justify-content: space-between;    /* Distribuye el espacio entre elementos */
+    align-items: center;              /* Alinea elementos verticalmente */
+    width: 100%;                      /* Ocupa todo el ancho disponible */
+    padding: 20px;                    /* Espacio interno uniforme */
+    position: relative;               /* Posicionamiento relativo */
 }
 
 /* Estilo del logo */
@@ -257,8 +262,8 @@ body {
 }
 
 html {
-    overflow-x: hidden;
-    width: 100%;
+    overflow-x: hidden;               /* Oculta la barra de desplazamiento horizontal */
+    width: 100%;                      /* Ocupa todo el ancho disponible */
 }
 
 /* Jerarquía tipográfica */
@@ -329,11 +334,18 @@ p {
 }
 
 .formulari_index button {
-    background: var(--presencial);
+    background: #6A478D;              /* Color de fondo morado */
+    color: white;                     /* Texto en blanco */
+    border: none;                     /* Sin borde */
+    padding: 12px 25px;              /* Espacio interno horizontal y vertical */
+    cursor: pointer;                  /* Cursor tipo puntero */
+    font-weight: bold;               /* Texto en negrita */
 }
 
 .formulari_index button:hover {
-    background: var(--online);
+    background: #F98D29;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Franjas corporativas */
@@ -394,8 +406,8 @@ p {
     text-align: left;
     color: var(--cep);
     font-weight: bold;
-    margin: 0;          /* Eliminado el margen */
-    font-size: 14px;    /* Reducido el tamaño de fuente */
+    margin: 0;
+    font-size: 18px;    /* Aumentado el tamaño de fuente */
 }
 
 .formulari_index input {
@@ -406,7 +418,8 @@ p {
     border-radius: 3px;
     transition: all 0.3s ease;
     background-color: white;
-    height: 24px;       /* Altura fija más pequeña */
+    height: 28px;       /* Aumentado la altura para acomodar la fuente más grande */
+    font-size: 16px;    /* Aumentado el tamaño de fuente de los inputs */
 }
 
 .formulari_index input:focus {
@@ -433,52 +446,50 @@ p {
 
 /* Estilos del índice */
 .indice_index {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    background: none;     /* Eliminar cualquier fondo */
-}
-
-.indice_index a {
-    width: auto;         /* Cambiar de 100% a auto */
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 0;
-    background: white;   /* Fondo blanco para los enlaces */
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: grid;                    /* Usa grid para el layout */
+    align-items: center;             /* Centra los elementos verticalmente */
+    justify-content: center;         /* Centra los elementos horizontalmente */
+    gap: 12px;                      /* Espacio entre elementos del grid */
+    padding: 15px;                  /* Espacio interno del contenedor */
+    text-align: center;             /* Centra el texto */
+    width: 75%;                     /* Ancho del contenedor */
+    max-width: 1200px;              /* Ancho máximo */
+    margin: 0 auto;                 /* Centra el contenedor */
+    background: none;               /* Sin fondo */
 }
 
 /* Enlaces del índice */
 .indice_index a {
-    color: #6A478D;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    width: 100%;                    /* Ocupa todo el ancho disponible */
+    display: block;                 /* Muestra como bloque */
+    padding: 20px 30px;            /* Espacio interno del enlace */
+    margin: 0;                     /* Sin márgenes */
+    background: white;             /* Fondo blanco */
+    border-radius: 8px;            /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra suave */
+    color: #6A478D;                /* Color del texto */
+    text-decoration: none;         /* Sin subrayado */
+    transition: all 0.3s ease;     /* Animación suave */
+    font-size: 26px;              /* Tamaño de fuente grande */
 }
 
 /* Efecto hover en enlaces del índice */
 .indice_index a:hover {
-    background: #F98D29;
-    color: white;
-    transform: scale(1.05);
+    background: #F98D29;           /* Cambia el fondo al pasar el ratón */
+    color: white;                  /* Cambia el color del texto */
+    transform: scale(1.05);        /* Efecto de zoom suave */
 }
 
 /* Animación de aparición */
+/* Define una animación llamada 'fadeIn' que se usa para hacer aparecer elementos suavemente */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-10px);
+        opacity: 0;                    /* El elemento empieza siendo invisible */
+        transform: translateY(-10px);   /* El elemento empieza 10px más arriba de su posición final */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;                    /* El elemento termina siendo completamente visible */
+        transform: translateY(0);       /* El elemento termina en su posición natural */
     }
 }
 
@@ -491,9 +502,10 @@ p {
 }
 
 .content-wrapper {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-top: 20px;
-    min-height: calc(100vh - 250px); /* Altura mínima considerando padding y márgenes */
+    background: white;                /* Fondo blanco */
+    padding: 20px;                    /* Espacio interno uniforme */
+    border-radius: 8px;              /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra suave */
+    margin-top: 20px;                /* Margen superior */
+    min-height: calc(100vh - 250px);  /* Altura mínima dinámica */
+}
