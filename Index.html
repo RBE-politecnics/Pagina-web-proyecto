@@ -65,32 +65,32 @@
         <form action="mail.php" method="POST">
             <div>
                 <label>Nombre</label><br>
-                <input type="text" required><br><br>
+                <input name="name" type="text" required><br><br>
             </div>
             
             <div>
                 <label>Apellido</label><br>
-                <input type="text"><br><br>
+                <input name="lastname" type="text"><br><br>
             </div>
             
             <div>
                 <label>Correo</label><br>
-                <input type="email" required><br><br>
+                <input name="email" type="email" required><br><br>
             </div>
             
             <div>
                 <label>Telefono</label><br>
-                <input type="tel"><br><br>
+                <input name="phone" type="tel"><br><br>
             </div>
             
             <div>
                 <label>Numero de ordenadores integrados</label><br>
-                <input type="number"><br><br>
+                <input name="computers" type="number"><br><br>
             </div>
             
             <div>
                 <label>Tipo de conexion</label><br>
-                <input list="conexiones">
+                <input name="connection" list="conexiones">
                 <datalist id="conexiones">
                     <option value="Wifi 1">
                     <option value="Cable">
@@ -100,7 +100,7 @@
             
             <div>
                 <label>Numero de salas que se usaran</label><br>
-                <input list="salas">
+                <input name="rooms" list="salas">
                 <datalist id="salas">
                     <option value="1">
                     <option value="2">
@@ -117,7 +117,7 @@
             
             <div>
                 <label>Comentarios</label><br>
-                <input type="text"><br><br>
+                <input name="message" type="text"><br><br>
             </div>
             
             <!-- Botón de envío -->
