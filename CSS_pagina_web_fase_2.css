@@ -1,28 +1,91 @@
+/* Notas de cambios pendientes */
 /*CAMBIOS
-Encabezaado mas estrecho
-"Fondo" para el indice
+Encabezado más estrecho
+"Fondo" para el índice
 */
 
-/* Configuración del menú desplegable y su posicionamiento */
-.dropdown {
-    position: relative;                /* Posicionamiento relativo para el contenedor */
-    display: inline-block;            /* Muestra como bloque en línea */
-    margin: 20px;                     /* Margen exterior uniforme */
-    z-index: 1000;                    /* Nivel de apilamiento alto */
+/* Definición de variables globales para colores corporativos */
+:root {
+    /* Color rojo principal usado en elementos presenciales y destacados */
+    --presencial: #D8262E;    
+    /* Color naranja secundario para elementos interactivos y online */
+    --online: #F98D29;        
+    /* Color morado corporativo del CEP, usado en elementos principales */
+    --cep: #6A478D;          
+    /* Color verde para sección ocupacional y elementos secundarios */
+    --ocupacional: #648B1A;   
+    /* Color azul para sección empresa y elementos terciarios */
+    --empresa: #009ABE;       
+    /* Color negro base para textos y elementos complementarios */
+    --complementari: #000000; 
 }
 
-/* Contenido del menú desplegable */
+/* Configuración base del documento HTML */
+html {
+    /* Previene el scroll horizontal en toda la página */
+    overflow-x: hidden;       
+    /* Asegura que el documento ocupe todo el ancho disponible */
+    width: 100%;             
+}
+
+/* Configuración general del cuerpo de la página */
+body {
+    /* Establece la familia tipográfica principal con alternativas */
+    font-family: 'Bulo Rounded', Calibri, sans-serif;  
+    /* Define el espaciado entre líneas para mejor legibilidad */
+    line-height: 1.6;        
+    /* Establece el color de fondo base */
+    background: white;       
+    /* Aplica el color de texto base usando variable */
+    color: var(--complementari);  
+    /* Elimina márgenes predeterminados */
+    margin: 0;              
+    /* Elimina relleno predeterminado */
+    padding: 0;             
+    /* Previene scroll horizontal */
+    overflow-x: hidden;     
+    /* Asegura ancho completo */
+    width: 100%;           
+    /* Habilita posicionamiento relativo para elementos hijos */
+    position: relative;    
+    /* Asegura altura mínima de ventana completa */
+    min-height: 100vh;     
+}
+
+/* Configuración del menú desplegable */
+.dropdown {
+    /* Establece posicionamiento relativo para elementos hijos */
+    position: relative;                
+    /* Permite que el elemento se comporte como bloque en línea */
+    display: inline-block;            
+    /* Añade espacio uniforme alrededor del menú */
+    margin: 20px;                     
+    /* Asegura que el menú esté por encima de otros elementos */
+    z-index: 1000;                    
+}
+
+/* Contenedor del contenido desplegable */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background: white;
-    width: max-content;
-    min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    padding: 0;
-    z-index: 1000;
-    left: 0;
-    top: calc(100% + 10px);
+    /* Oculta el menú por defecto */
+    display: none;           
+    /* Posiciona absolutamente respecto al padre */
+    position: absolute;      
+    /* Fondo blanco para el menú */
+    background: white;       
+    /* Ajusta el ancho al contenido */
+    width: max-content;      
+    /* Establece ancho mínimo */
+    min-width: 250px;        
+    /* Añade sombra para efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);  
+    /* Elimina relleno interno */
+    padding: 0;              
+    /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;           
+    /* Alinea con el borde izquierdo del padre */
+    left: 0;                 
+    /* Posiciona 10px debajo del botón */
+    top: calc(100% + 10px);  
 }
 
 /* Eliminar texto "Otras Paginas" */
@@ -65,87 +128,110 @@ Encabezaado mas estrecho
     font-size: 16px;
 }
 
+/* Elimina el borde inferior del último enlace del menú */
 .dropdown-content a:last-child {
+    /* Quita la línea separadora del último elemento */
     border-bottom: none;
 }
 
+/* Efecto al pasar el ratón sobre los enlaces */
 .dropdown-content a:hover {
+    /* Color de fondo suave al hover */
     background-color: #f5f5f5;
+    /* Cambia el color del texto al color corporativo online */
     color: var(--online);
 }
 
-/* Mostrar menú al hacer hover */
+/* Control de visualización del menú desplegable */
 .dropdown:hover .dropdown-content {
+    /* Muestra el menú al pasar el ratón */
     display: block;
+    /* Aplica una animación suave de aparición */
     animation: fadeIn 0.3s ease;
 }
 
-/* Enlaces dentro del menú desplegable */
-.dropdown-content a {
-    color: #6A478D;
-    text-decoration: none;
-    padding: 12px 20px;
-    display: block;
-    border-bottom: 1px solid #000000;
-    white-space: nowrap;
-}
-
-/* Ajuste del header-wrapper */
-.header-wrapper {
-    position: relative;
-    z-index: 100;
-}
-
-/* Ajuste del título principal */
+/* Configuración del título principal */
 .main-title {
+    /* Posicionamiento absoluto en el centro */
+    position: absolute;
+    left: 50%;
+    /* Centra horizontalmente el título */
+    transform: translateX(-50%);
+    /* Alineación del texto */
+    text-align: center;
+    margin: 0;
+    /* Asegura visibilidad sobre otros elementos */
     z-index: 1;
-}
-
-/* Estilo del título principal */
-.main-title {
-    display: inline-block;
-    font-size: 3em;           /* Tamaño grande de la fuente */
-    text-align: center;       /* Centra el texto */
-    margin: 20px;
-    font-weight: bold;        /* Texto en negrita */
-    background: linear-gradient(45deg, #D8262E, #F98D29);  /* Degradado de color en el texto */
-    -webkit-background-clip: text;    /* Aplica el degradado solo al texto */
+    /* Aplica degradado de colores corporativos */
+    background: linear-gradient(45deg, var(--presencial), var(--online));
+    /* Aplica el degradado solo al texto */
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: 5px;      /* Espaciado entre letras */
-    vertical-align: middle;
+    /* Tipografía y tamaño */
+    font-family: 'Bulo Rounded Black', Calibri, sans-serif;
+    font-size: 36px;
+    /* Espaciado entre caracteres */
+    letter-spacing: 5px;
 }
 
-/* Estilo del botón hamburguesa */
+/* Selección para el texto del menú desplegable */
+.dropdown span {
+    /* Oculta el elemento span del menú */
+    display: none;
+}
+
+/* Configuración del botón de menú hamburguesa */
 .hamburger-menu {
+    /* Hace que el cursor cambie a pointer al pasar por encima */
     cursor: pointer;
+    /* Añade espacio interno alrededor del botón */
     padding: 15px;
+    /* Establece posicionamiento relativo para las barras */
     position: relative;
+    /* Asegura que esté por encima de otros elementos */
     z-index: 2;
+    /* Ajusta el margen inferior negativo para alineación */
     margin-bottom: -20px;
+    /* Suaviza todas las transiciones */
     transition: all 0.3s ease;
 }
 
+/* Efecto al pasar el ratón sobre el botón hamburguesa */
 .hamburger-menu:hover .bar {
+    /* Cambia el color de las barras al hacer hover */
     background-color: #28cf9d;
 }
 
+/* Estilo de las barras del menú hamburguesa */
 .bar {
+    /* Define el ancho de cada barra */
     width: 45px;
+    /* Define la altura de cada barra */
     height: 5px;
+    /* Establece el color morado de las barras */
     background-color: #61378C;
+    /* Espacio entre las barras */
     margin: 8px 0;
+    /* Suaviza las transiciones de las barras */
     transition: all 0.3s ease;
+    /* Redondea los bordes de las barras */
     border-radius: 3px;
 }
 
-/* Barras del menú hamburguesa */
+/* Configuración adicional de las barras del menú */
 .bar {
-    width: 45px;             /* Ancho de las barras */
-    height: 5px;             /* Altura de las barras */
+    /* Define el ancho consistente de las barras */
+    width: 45px;             
+    /* Mantiene la altura uniforme */
+    height: 5px;             
+    /* Usa el color corporativo principal */
     background-color: #D8262E;
-    margin: 8px 0;           /* Espacio entre barras */
+    /* Mantiene el espaciado entre barras */
+    margin: 8px 0;           
+    /* Asegura transiciones suaves */
     transition: all 0.3s ease;
-    border-radius: 3px;      /* Bordes redondeados de las barras */
+    /* Mantiene los bordes redondeados */
+    border-radius: 3px;      
 }
 
 /* Contenido del menú desplegable */
@@ -224,131 +310,189 @@ Encabezaado mas estrecho
     z-index: 2;
 }
 
-/* Variables de colores corporativos */
+/* Define las variables de colores corporativos para toda la web */
 :root {
-    --presencial: #D8262E;    /* Formación presencial */
-    --online: #F98D29;        /* Formación online */
-    --cep: #6A478D;          /* Formación espacio CEP */
-    --ocupacional: #648B1A;   /* Formación ocupacional */
-    --empresa: #009ABE;       /* Formación para empresa */
-    --complementari: #000000; /* Color complementario */
+    --presencial: #D8262E;    /* Color rojo usado para la formación presencial */
+    --online: #F98D29;        /* Color naranja usado para la formación online */
+    --cep: #6A478D;          /* Color morado institucional del CEP */
+    --ocupacional: #648B1A;   /* Color verde usado para formación ocupacional */
+    --empresa: #009ABE;       /* Color azul usado para sección empresa */
+    --complementari: #000000; /* Color negro para textos y elementos complementarios */
 }
 
-/* Estilos generales y tipografía */
-body {
-    font-family: 'Bulo Rounded', Calibri, sans-serif;
-    line-height: 1.6;
-    background: white;
-    color: var(--complementari);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-    min-height: 100vh; /* Asegura altura mínima de toda la ventana */
-}
-
-/* Estilo específico para páginas secundarias */
-.header-wrapper {
-    min-height: 150px; /* Altura mínima para el header */
-}
-
-/* Contenedor del encabezado */
-.header-wrapper + * {
-    /*min-height: calc(100vh - 150px); /* El resto del contenido ocupa el espacio restante */
-    background-color: #f5f5f5; /* Color de fondo sutil */
-    margin: 0;
-    padding: 20px;
-}
-
+/* Configuración básica del elemento HTML */
 html {
-    overflow-x: hidden;               /* Oculta la barra de desplazamiento horizontal */
-    width: 100%;                      /* Ocupa todo el ancho disponible */
+    overflow-x: hidden;       /* Evita el scroll horizontal en toda la página */
+    width: 100%;             /* Asegura que el HTML ocupe todo el ancho disponible */
 }
 
-/* Jerarquía tipográfica */
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Bulo Rounded', Calibri, sans-serif;  /* Define la tipografía principal con alternativas */
+    line-height: 1.6;        /* Define el espaciado entre líneas para mejor legibilidad */
+    background: white;       /* Establece el fondo blanco para toda la página */
+    color: var(--complementari);  /* Usa el color complementario para el texto */
+    margin: 0;              /* Elimina los márgenes externos */
+    padding: 0;             /* Elimina el relleno interno */
+    overflow-x: hidden;     /* Previene el scroll horizontal */
+    width: 100%;           /* Asegura que el body ocupe todo el ancho */
+    position: relative;    /* Establece posicionamiento relativo para elementos hijos */
+    min-height: 100vh;     /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* Definición de estilos para encabezados principales */
 h1 {
-    font-family: 'Bulo Rounded Black', Calibri, sans-serif;
-    font-size: 36px;
+    font-family: 'Bulo Rounded Black', Calibri, sans-serif;  /* Tipografía negrita para títulos */
+    font-size: 36px;         /* Tamaño de fuente grande para títulos */
 }
 
+/* Estilos para encabezados secundarios */
 h2, h3 {
-    font-family: 'Bulo Rounded Bold', Calibri, sans-serif;
-    font-size: 24px;
+    font-family: 'Bulo Rounded Bold', Calibri, sans-serif;  /* Tipografía semi-negrita */
+    font-size: 24px;         /* Tamaño medio para subtítulos */
 }
 
+/* Estilos para párrafos */
 p {
+    font-family: 'Bulo Rounded Regular', Calibri, sans-serif;  /* Tipografía regular */
+    font-size: 16px;         /* Tamaño base para texto normal */
+}
+
+/* Contenedor principal del encabezado */
+.header-wrapper {
+    display: flex;           /* Usa flexbox para alinear elementos */
+    justify-content: space-between;  /* Distribuye el espacio entre elementos */
+    align-items: center;    /* Centra verticalmente los elementos */
+    width: 100%;           /* Ocupa todo el ancho disponible */
+    padding: 20px;         /* Espacio interno uniforme */
+    position: relative;    /* Para posicionamiento de elementos hijos */
+    min-height: 150px;     /* Altura mínima del encabezado */
+    z-index: 100;         /* Asegura que esté por encima de otros elementos */
+}
+
+/* Configuración del menú desplegable */
+.dropdown {
+    position: relative;    /* Posicionamiento relativo para submenús */
+    left: 0;              /* Alineado a la izquierda */
+    z-index: 2;           /* Por encima de otros elementos */
+    margin: 20px;         /* Espacio exterior uniforme */
+}
+
+/* Botón hamburguesa */
+.hamburger-menu {
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -20px;
+    transition: all 0.3s ease;
+}
+
+/* Barras del menú hamburguesa */
+.bar {
+    width: 45px;
+    height: 5px;
+    background-color: var(--presencial);
+    margin: 8px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;      /* Bordes redondeados de las barras */
+}
+
+/* Efecto hover en las barras */
+.hamburger-menu:hover .bar {
+    background-color: var(--online);
+}
+
+/* Contenido del menú desplegable */
+/* Configuración del contenido del menú desplegable */
+.dropdown-content {
+    /* Oculta el menú por defecto */
+    display: none;           
+    /* Posicionamiento absoluto respecto al contenedor padre */
+    position: absolute;      
+    /* Color de fondo del menú */
+    background: white;       
+    /* Ajusta el ancho automáticamente al contenido */
+    width: max-content;      
+    /* Establece un ancho mínimo para el menú */
+    min-width: 250px;        
+    /* Añade sombra para dar efecto de profundidad */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);  
+    /* Elimina el relleno interno */
+    padding: 0;              
+    /* Asegura que el menú aparezca por encima de otros elementos */
+    z-index: 1000;           
+    /* Alinea con el borde izquierdo del botón */
+    left: 0;                 
+    /* Posiciona el menú 10px debajo del botón */
+    top: calc(100% + 10px);  
+}
+
+/* Estilo de los enlaces dentro del menú desplegable */
+.dropdown-content a {
+    /* Color del texto usando variable corporativa */
+    color: var(--cep);
+    /* Elimina el subrayado de los enlaces */
+    text-decoration: none;
+    /* Espaciado interno para área clickeable */
+    padding: 12px 20px;
+    /* Hace que cada enlace ocupe todo el ancho disponible */
+    display: block;
+    /* Línea separadora entre enlaces */
+    border-bottom: 1px solid #000000;
+    /* Previene que el texto se divida en múltiples líneas */
+    white-space: nowrap;     
+    /* Establece la tipografía consistente */
     font-family: 'Bulo Rounded Regular', Calibri, sans-serif;
+    /* Define el tamaño de texto */
     font-size: 16px;
 }
 
-/* Actualización de estilos existentes */
+/* Último enlace sin borde inferior */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Efecto hover en enlaces */
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: var(--online);
+}
+
+/* Activación del menú desplegable */
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Título principal */
 .main-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 0;
+    z-index: 1;
     background: linear-gradient(45deg, var(--presencial), var(--online));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bulo Rounded Black', Calibri, sans-serif;
     font-size: 36px;
+    letter-spacing: 5px;     /* Espaciado entre letras */
 }
 
-.title {
-    background: var(--presencial);
-    color: white;
-    font-family: 'Bulo Rounded Bold', Calibri, sans-serif;
+/* Logo CEP */
+.logo-cep {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
-.bar {
-    background-color: var(--presencial);
-}
-
-.hamburger-menu:hover .bar {
-    background-color: var(--online);
-}
-
-.dropdown-content a {
-    color: var(--cep);
-    font-family: 'Bulo Rounded Regular', Calibri, sans-serif;
-    font-size: 16px;
-}
-
-.dropdown-content a:hover {
-    color: var(--online);
-}
-
-.indice_index a {
-    color: var(--cep);
-    font-family: 'Bulo Rounded Regular', Calibri, sans-serif;
-}
-
-.indice_index a:hover {
-    background: var(--online);
-}
-
-.formulari_index {
-    background: rgba(106, 71, 141, 0.05);
-}
-
-.formulari_index input, .formulari_index button {
-    border-color: var(--cep);
-    font-family: 'Bulo Rounded Regular', Calibri, sans-serif;
-}
-
-.formulari_index button {
-    background: #6A478D;              /* Color de fondo morado */
-    color: white;                     /* Texto en blanco */
-    border: none;                     /* Sin borde */
-    padding: 12px 25px;              /* Espacio interno horizontal y vertical */
-    cursor: pointer;                  /* Cursor tipo puntero */
-    font-weight: bold;               /* Texto en negrita */
-}
-
-.formulari_index button:hover {
-    background: #F98D29;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Franjas corporativas */
+/* Franjas decorativas */
 .header-stripe, .footer-stripe {
     height: 4px;
     background: linear-gradient(to right,
@@ -363,97 +507,29 @@ p {
     );
 }
 
-/* Títulos secundarios - Estilo para la barra roja que contiene el título de cada sección */
+/* Títulos de sección */
 .title {
-    font-size: xx-large;      /* Tamaño de fuente grande para destacar el título */
-    text-align: center;       /* Centrado horizontal del texto dentro de la barra */
-    color: white;            /* Color blanco para el texto para mejor contraste */
-    background: #D8262E;     /* Color de fondo rojo corporativo para la barra */
-    padding: 2px 20px;       /* Espaciado interno: 2px arriba/abajo, 20px izquierda/derecha */
-    margin: 2px 0;          /* Margen vertical mínimo para separar de otros elementos */
-    border-radius: 8px;      /* Bordes redondeados para suavizar la apariencia */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Sombra suave para dar efecto de elevación */
-}
-
-/* Estilos del formulario */
-.formulari_index {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(97, 55, 140, 0.05);
-    border-radius: 15px;
-    margin: 20px auto;
-    width: 75%;
-    max-width: 1200px;
-    position: relative;
-    overflow: hidden;
-}
-
-.formulari_index form > div {
-    position: relative;
-    width: 300%;
-    margin: 0;           /* Eliminado el margen */
-    left: -100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;             /* Eliminado el gap */
-}
-
-.formulari_index label {
-    width: 200px;
-    text-align: left;
-    color: var(--cep);
-    font-weight: bold;
-    margin: 0;
-    font-size: 18px;    /* Aumentado el tamaño de fuente */
-}
-
-.formulari_index input {
-    width: 100%;
-    padding: 3px;       /* Reducido el padding */
-    margin: 0 0 2px 0;  /* Solo un pequeño margen inferior */
-    border: 1px solid #6A478D;  /* Borde más fino */
-    border-radius: 3px;
-    transition: all 0.3s ease;
-    background-color: white;
-    height: 28px;       /* Aumentado la altura para acomodar la fuente más grande */
-    font-size: 16px;    /* Aumentado el tamaño de fuente de los inputs */
-}
-
-.formulari_index input:focus {
-    border-color: var(--online);
-    box-shadow: 0 0 5px rgba(249, 141, 41, 0.5);
-}
-
-/* Estilo del botón */
-.formulari_index button {
-    background: #6A478D;
+    font-size: xx-large;
+    text-align: center;
     color: white;
-    border: none;
-    padding: 12px 25px;
-    cursor: pointer;
-    font-weight: bold;
+    background: var(--presencial);
+    padding: 2px 20px;
+    margin: 2px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Bulo Rounded Bold', Calibri, sans-serif;
 }
 
-/* Efecto hover en el botón */
-.formulari_index button:hover {
-    background: #F98D29;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Estilos del índice */
+/* Índice de navegación */
 .indice_index {
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 8px;                      /* Reducido de 12px */
-    padding: 10px;                 /* Reducido de 15px */
+    gap: 8px;
+    padding: 10px;
     text-align: center;
-    width: 50%;                    /* Reducido de 75% */
-    max-width: 800px;              /* Reducido de 1200px */
+    width: 50%;
+    max-width: 800px;
     margin: 0 auto;
     background: none;
 }
@@ -462,50 +538,179 @@ p {
 .indice_index a {
     width: 100%;
     display: block;
-    padding: 12px 20px;            /* Reducido de 20px 30px */
-    margin: 0;
+    padding: 12px 20px;
     background: white;
-    border-radius: 6px;            /* Reducido de 8px */
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    color: #6A478D;
+    color: var(--cep);
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 20px;              /* Reducido de 26px */
+    font-size: 20px;
+    font-family: 'Bulo Rounded Regular', Calibri, sans-serif;
 }
 
 /* Efecto hover en enlaces del índice */
 .indice_index a:hover {
-    background: #F98D29;           /* Cambia el fondo al pasar el ratón */
-    color: white;                  /* Cambia el color del texto */
-    transform: scale(1.05);        /* Efecto de zoom suave */
+    background: var(--online);
+    color: white;
+    transform: scale(1.05);  /* Efecto de zoom suave */
+}
+
+/* Sección "Quiénes somos" */
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.about-us p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.about-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.about-us li {
+    margin: 15px 0;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(106, 71, 141, 0.05);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.about-us li:hover {
+    transform: translateX(10px);  /* Desplazamiento al hover */
+    background: rgba(106, 71, 141, 0.1);
+}
+
+/* Sección Labdoo */
+.labdoo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    gap: 200px;             /* Espaciado entre contenido e imagen */
+}
+
+.labdoo-content {
+    flex: 3;               /* Proporción del contenido */
+    max-width: 65%;
+}
+
+.labdoo-image {
+    flex: 1;
+    text-align: right;
+    margin-left: 50px;     /* Separación adicional */
+}
+
+.labdoo-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;   /* Bordes redondeados */
+}
+
+/* Formulario de contacto */
+.formulari_index {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(106, 71, 141, 0.05);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 75%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor de campos del formulario */
+.formulari_index form > div {
+    position: relative;
+    width: 300%;
+    margin: 0;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+/* Etiquetas del formulario */
+.formulari_index label {
+    width: 200px;
+    text-align: left;
+    color: var(--cep);
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Campos de entrada */
+.formulari_index input {
+    width: 100%;
+    padding: 3px;
+    margin: 0 0 2px 0;
+    border: 1px solid var(--cep);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    background-color: white;
+    height: 28px;
+    font-size: 16px;
+}
+
+/* Estado focus de los campos */
+.formulari_index input:focus {
+    border-color: var(--online);
+    box-shadow: 0 0 5px rgba(249, 141, 41, 0.5);
+}
+
+/* Botón del formulario */
+.formulari_index button {
+    background: var(--cep);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Bulo Rounded Regular', Calibri, sans-serif;
+}
+
+/* Efecto hover del botón */
+.formulari_index button:hover {
+    background: var(--online);
+    transform: translateY(-2px);  /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Animación de aparición */
-/* Define una animación llamada 'fadeIn' que se usa para hacer aparecer elementos suavemente */
 @keyframes fadeIn {
     from {
-        opacity: 0;                    /* El elemento empieza siendo invisible */
-        transform: translateY(-10px);   /* El elemento empieza 10px más arriba de su posición final */
+        opacity: 0;
+        transform: translateY(-10px);
     }
     to {
-        opacity: 1;                    /* El elemento termina siendo completamente visible */
-        transform: translateY(0);       /* El elemento termina en su posición natural */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Contenido principal */
-.main-content {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: calc(100vh - 150px); /* Altura mínima restando el header */
-}
-
-.content-wrapper {
-    background: white;                /* Fondo blanco */
-    padding: 20px;                    /* Espacio interno uniforme */
-    border-radius: 8px;              /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra suave */
-    margin-top: 20px;                /* Margen superior */
-    min-height: calc(100vh - 250px);  /* Altura mínima dinámica */
+/* Adaptación responsive */
+@media (max-width: 768px) {
+    .labdoo-section {
+        flex-direction: column;    /* Apilado en móviles */
+    }
+    
+    .labdoo-image img {
+        max-width: 200px;          /* Imagen más pequeña */
+        margin: 20px 0;
+    }
 }
